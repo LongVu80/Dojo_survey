@@ -8,6 +8,7 @@ def process(request):
             'name': request.POST['name'],
             'loc': request.POST['location'],
             'lang': request.POST['language'],
+            'fluence': request.POST.getlist('fluence'),
             'comment': request.POST['comment']
         }
         return render(request, 'results.html', context)
